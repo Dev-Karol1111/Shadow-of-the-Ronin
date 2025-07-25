@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfc6auntqdxr1"]
+
+[ext_resource type="Script" uid="uid://dmb1b37ha6hwn" path="res://scripts/pick_up.gd" id="1_c468w"]
+[ext_resource type="Resource" uid="uid://do2kw1kv7nc8o" path="res://resources/items/Weapons/bow/default/bow_default.tres" id="2_adew5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_adew5"]
+radius = 38.0
+
+[node name="PickUp" type="Area2D"]
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_c468w")
+item = ExtResource("2_adew5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_adew5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+skew = 0.0436332
+
+[node name="Label" type="Label" parent="."]
+offset_left = -35.0
+offset_top = -26.0
+offset_right = 104.0
+offset_bottom = -3.0
+scale = Vector2(0.5, 0.5)
+text = "Pick up [name] 	[f]"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://gjop7wvhx54h"]
+
+[ext_resource type="Script" uid="uid://dq26yydo7qfj2" path="res://resources/items/Weapons/bow/arrow.gd" id="1_pxrsa"]
+[ext_resource type="Texture2D" uid="uid://bdg6tisn7cxjc" path="res://resources/items/Weapons/bow/arrow_test.png" id="2_gnttq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5w0s5"]
+size = Vector2(16, 8)
+
+[node name="arrow" type="Area2D"]
+script = ExtResource("1_pxrsa")
+speed = 200
+metadata/_custom_type_script = "uid://bb2ohg3im758v"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_gnttq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5w0s5")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

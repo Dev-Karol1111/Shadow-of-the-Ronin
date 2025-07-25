@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="SwordData" load_steps=11 format=3 uid="uid://cqijog3bmf7w7"]
+
+[ext_resource type="Script" uid="uid://blkc01jhka36p" path="res://resources/items/Weapons/sword/sword_basic.gd" id="1_dl5lt"]
+[ext_resource type="Texture2D" uid="uid://05tnq62fivub" path="res://resources/items/Weapons/sword/default/attack.png" id="2_oocmo"]
+[ext_resource type="Texture2D" uid="uid://i8jy1vqahsfl" path="res://resources/items/Weapons/sword/default/sword.png" id="3_gtrn7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4sxsf"]
+atlas = ExtResource("2_oocmo")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ckabc"]
+atlas = ExtResource("2_oocmo")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yck63"]
+atlas = ExtResource("2_oocmo")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fhq6"]
+atlas = ExtResource("2_oocmo")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fj58"]
+atlas = ExtResource("2_oocmo")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crsnv"]
+atlas = ExtResource("2_oocmo")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ct8l7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4sxsf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ckabc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yck63")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fhq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5fj58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crsnv")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_gtrn7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_dl5lt")
+damage = 3
+distance_from_player = 13
+smooth_follow = 10.0
+name = "Default sword"
+descryption = ""
+texture = SubResource("SpriteFrames_ct8l7")
+metadata/_custom_type_script = "uid://blkc01jhka36p"

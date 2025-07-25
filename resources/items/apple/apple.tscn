@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://o00njlcns6sl"]
+
+[ext_resource type="Texture2D" uid="uid://dhf3phjbek7bq" path="res://resources/items/apple/apple.png" id="2_r2r12"]
+
+[sub_resource type="GDScript" id="GDScript_2xon6"]
+script/source = "extends Area2D
+
+var item
+
+func _on_body_entered(body: Node2D) -> void:
+	if body.has_method(\"player\"):
+		body.collect(item)
+		await get_tree().create_timer(0.1).timeout
+		self.queue_free()
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_imssb"]
+radius = 16.2788
+
+[node name="apple" type="Area2D"]
+scale = Vector2(0.5, 0.5)
+script = SubResource("GDScript_2xon6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_imssb")
+
+[node name="Apple" type="Sprite2D" parent="."]
+texture = ExtResource("2_r2r12")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://jyh7q72uma6r"]
+
+[ext_resource type="Script" uid="uid://uc1g7b6dctlt" path="res://resources/items/Weapons/bow/bow.gd" id="1_inhjk"]
+
+[node name="bow" type="Area2D"]
+script = ExtResource("1_inhjk")
+
+[node name="firing_point" type="Marker2D" parent="."]
+position = Vector2(10, -10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

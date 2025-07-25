@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="BowData" load_steps=11 format=3 uid="uid://do2kw1kv7nc8o"]
+
+[ext_resource type="PackedScene" uid="uid://gjop7wvhx54h" path="res://resources/items/Weapons/bow/arrow.tscn" id="1_ykk5k"]
+[ext_resource type="Script" uid="uid://dg0cxmavbynqt" path="res://resources/items/Weapons/bow/bow_basic.gd" id="2_urpk7"]
+[ext_resource type="Texture2D" uid="uid://k4nvph52fvdi" path="res://resources/items/Weapons/bow/default/attack.png" id="3_bfgi5"]
+[ext_resource type="Texture2D" uid="uid://cf8qexwj6we5b" path="res://resources/items/Weapons/bow/default/bow.png" id="4_w1doc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykk5k"]
+atlas = ExtResource("3_bfgi5")
+region = Rect2(0, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urpk7"]
+atlas = ExtResource("3_bfgi5")
+region = Rect2(20, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfgi5"]
+atlas = ExtResource("3_bfgi5")
+region = Rect2(40, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1doc"]
+atlas = ExtResource("3_bfgi5")
+region = Rect2(60, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqha5"]
+atlas = ExtResource("3_bfgi5")
+region = Rect2(80, 0, 20, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_urpk7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ykk5k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urpk7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfgi5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w1doc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iqha5")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_w1doc")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("2_urpk7")
+damage = 5
+arrow = ExtResource("1_ykk5k")
+distance_from_player = 13
+smooth_follow = 10.0
+name = "Default bow"
+descryption = ""
+texture = SubResource("SpriteFrames_urpk7")
+metadata/_custom_type_script = "uid://dg0cxmavbynqt"

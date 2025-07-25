@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp6v0swfjotwg"]
+
+[ext_resource type="Script" uid="uid://bp2iwm1tj0yn2" path="res://resources/items/Weapons/sword/sword.gd" id="1_ciu6k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ciu6k"]
+size = Vector2(26, 26)
+
+[node name="sword" type="Area2D"]
+script = ExtResource("1_ciu6k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ciu6k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -1)
+animation = &""
+autoplay = "idle"

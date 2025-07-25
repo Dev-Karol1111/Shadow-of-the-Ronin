@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://by1b73yc03mqp"]
+
+[ext_resource type="Script" uid="uid://mcctqs0fufu1" path="res://world/objects/apple-tree/apple_tree.gd" id="1_6q1jf"]
+[ext_resource type="Texture2D" uid="uid://kwtebajly1is" path="res://world/objects/apple-tree/survivalgame-appletree.png" id="1_oqenv"]
+[ext_resource type="Resource" uid="uid://3opx3rbpkoh1" path="res://resources/items/apple/apple.tres" id="2_2a5gi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6q1jf"]
+radius = 31.0644
+
+[node name="apple-tree" type="Area2D"]
+script = ExtResource("1_6q1jf")
+apple_item = ExtResource("2_2a5gi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_oqenv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6q1jf")
+
+[node name="Marker2D" type="Marker2D" parent="."]
