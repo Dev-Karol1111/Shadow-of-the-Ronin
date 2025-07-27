@@ -2,7 +2,7 @@ extends Area2D
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var firing_point: Marker2D = $firing_point
-@onready var player = get_parent()
+@onready var player = get_parent().get_parent()
 
 @export var data: BowData
 

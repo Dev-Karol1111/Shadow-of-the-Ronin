@@ -64,5 +64,6 @@ distance_from_player = 13
 smooth_follow = 10.0
 name = "Default bow"
 descryption = ""
+item_type = "Weapon"
 texture = SubResource("SpriteFrames_urpk7")
 metadata/_custom_type_script = "uid://dg0cxmavbynqt"

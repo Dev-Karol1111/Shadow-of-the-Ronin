@@ -1,13 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://k68qcxmordrt"]
+[gd_scene load_steps=13 format=3 uid="uid://k68qcxmordrt"]
 
 [ext_resource type="Script" uid="uid://fm4oflt0182k" path="res://scripts/player.gd" id="1_gmlin"]
 [ext_resource type="Texture2D" uid="uid://b3p3xyu5mwlvx" path="res://assets/gfx/characters/raiko/idle.png" id="2_gmlin"]
 [ext_resource type="Resource" uid="uid://bd7qwu6m4apo1" path="res://resources/player/player_inventory.tres" id="2_p47bc"]
 [ext_resource type="Texture2D" uid="uid://dhqnhicn8yk2v" path="res://assets/gfx/characters/raiko/run.png" id="4_lvxji"]
-[ext_resource type="PackedScene" uid="uid://bp6v0swfjotwg" path="res://resources/items/Weapons/sword/sword.tscn" id="4_p47bc"]
-[ext_resource type="PackedScene" uid="uid://jyh7q72uma6r" path="res://resources/items/Weapons/bow/bow.tscn" id="6_0owmy"]
-[ext_resource type="Resource" uid="uid://cqijog3bmf7w7" path="res://resources/items/Weapons/sword/default/default.tres" id="6_qek5x"]
-[ext_resource type="Resource" uid="uid://do2kw1kv7nc8o" path="res://resources/items/Weapons/bow/default/bow_default.tres" id="7_qek5x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gmlin"]
 size = Vector2(23, 31)
@@ -80,10 +76,4 @@ sprite_frames = SubResource("SpriteFrames_h17s1")
 animation = &"run"
 autoplay = "idle"
 
-[node name="sword" parent="." instance=ExtResource("4_p47bc")]
-visible = false
-position = Vector2(11, -3)
-item = ExtResource("6_qek5x")
-
-[node name="bow" parent="." instance=ExtResource("6_0owmy")]
-data = ExtResource("7_qek5x")
+[node name="weapon_slot" type="Node2D" parent="."]

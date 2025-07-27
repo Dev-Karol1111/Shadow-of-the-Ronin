@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://x4uxnux6fe3e"]
+[gd_scene load_steps=14 format=4 uid="uid://x4uxnux6fe3e"]
 
 [ext_resource type="Texture2D" uid="uid://dxugl37giljhq" path="res://assets/tileset/world.png" id="1_71a5w"]
 [ext_resource type="PackedScene" uid="uid://k68qcxmordrt" path="res://scenes/player.tscn" id="2_o1x13"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cpov53vbn6pht" path="res://assets/gfx/hp/healthbarUnder.png" id="6_jlhui"]
 [ext_resource type="Texture2D" uid="uid://2rsvqeyiye7k" path="res://assets/gfx/hp/healthbarProgress.png" id="7_lxkco"]
 [ext_resource type="PackedScene" uid="uid://cfc6auntqdxr1" path="res://scenes/pick_up.tscn" id="9_lxkco"]
+[ext_resource type="Resource" uid="uid://cqijog3bmf7w7" path="res://resources/items/Weapons/sword/default/default.tres" id="10_3vqyw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_71a5w"]
 texture = ExtResource("1_71a5w")
@@ -81,3 +82,8 @@ script = ExtResource("6_ii5h2")
 
 [node name="PickUp" parent="." instance=ExtResource("9_lxkco")]
 position = Vector2(34, 158)
+
+[node name="PickUp2" parent="." instance=ExtResource("9_lxkco")]
+position = Vector2(272, 171)
+scale = Vector2(0.5625, 0.5625)
+item = ExtResource("10_3vqyw")

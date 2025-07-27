@@ -5,8 +5,9 @@
 
 [node name="inventory_ui_slot" type="Panel"]
 custom_minimum_size = Vector2(20, 20)
-offset_right = 16.0
-offset_bottom = 16.0
+offset_right = 20.0
+offset_bottom = 20.0
+mouse_filter = 1
 script = ExtResource("1_ublxk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -17,8 +18,8 @@ texture = ExtResource("1_u76bn")
 layout_mode = 0
 offset_left = -1.0
 offset_top = -1.0
-offset_right = 33.0
-offset_bottom = 29.0
+offset_right = 32.0
+offset_bottom = 26.0
 
 [node name="Panel" type="Panel" parent="CenterContainer"]
 layout_mode = 2
@@ -34,3 +35,41 @@ offset_right = 35.0
 offset_bottom = 22.0
 scale = Vector2(0.5, 0.5)
 text = "1"
+
+[node name="action" type="ColorRect" parent="."]
+z_index = 1
+z_as_relative = false
+layout_mode = 0
+offset_left = 14.0
+offset_top = 14.0
+offset_right = 58.0
+offset_bottom = 42.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Line2D" type="Line2D" parent="action"]
+position = Vector2(17, 14)
+rotation = 1.5708
+points = PackedVector2Array(0, -27, 0, 17)
+width = 3.0
+
+[node name="Drop" type="Button" parent="action"]
+light_mask = 512
+visibility_layer = 512
+layout_mode = 0
+offset_top = 15.0
+offset_right = 110.0
+offset_bottom = 46.0
+scale = Vector2(0.4, 0.4)
+text = "DROP"
+
+[node name="Use" type="Button" parent="action"]
+layout_mode = 0
+offset_right = 110.0
+offset_bottom = 31.0
+scale = Vector2(0.4, 0.4)
+text = "USE"
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="pressed" from="action/Drop" to="." method="_on_drop_pressed"]
+[connection signal="pressed" from="action/Use" to="." method="_on_use_pressed"]

@@ -2,7 +2,7 @@ extends Area2D
 
 @export var item: SwordData
 
-@onready var player = get_parent()
+@onready var player = get_parent().get_parent()
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 

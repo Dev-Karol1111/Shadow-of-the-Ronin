@@ -69,5 +69,6 @@ distance_from_player = 13
 smooth_follow = 10.0
 name = "Default sword"
 descryption = ""
+item_type = "Weapon"
 texture = SubResource("SpriteFrames_ct8l7")
 metadata/_custom_type_script = "uid://blkc01jhka36p"

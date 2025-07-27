@@ -9,3 +9,6 @@
 5. Inventory (Can pick up item but cannot use or drop)
 6. Picking up items
  
+#### Version 1.1
+1. Equiping weapons in inventory
+2. Changing weapons
