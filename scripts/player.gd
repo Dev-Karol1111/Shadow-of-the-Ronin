@@ -68,4 +68,6 @@ func collect(item):
 
 func take_damage(damage: int) -> void:
 	current_hp -= damage
+	if current_hp <= 0:
+		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 	health_changed.emit()

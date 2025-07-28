@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://hwjfepdo2gyx"]
+
+[ext_resource type="Script" uid="uid://cfifkiutmawsw" path="res://scripts/game_over.gd" id="1_xeevv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0nqlu"]
+font_size = 64
+font_color = Color(1, 0, 0, 1)
+
+[node name="Game Over" type="Node2D"]
+script = ExtResource("1_xeevv")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1149.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Text" type="Label" parent="."]
+offset_left = 388.0
+offset_top = 114.0
+offset_right = 755.0
+offset_bottom = 202.0
+size_flags_horizontal = 4
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_0nqlu")
+
+[node name="Play Again" type="Button" parent="."]
+offset_left = 77.0
+offset_top = 401.0
+offset_right = 330.0
+offset_bottom = 585.0
+text = "PLAY AGAIN"
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 754.0
+offset_top = 420.0
+offset_right = 1029.0
+offset_bottom = 591.0
+text = "EXIT"
+
+[connection signal="pressed" from="Play Again" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

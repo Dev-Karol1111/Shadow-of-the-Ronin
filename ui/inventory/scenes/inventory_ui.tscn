@@ -74,7 +74,6 @@ layout_mode = 2
 
 [node name="inventory_ui_slot_weapon" parent="NinePatchRect" instance=ExtResource("2_aut80")]
 layout_mode = 2
-anchors_preset = 0
 offset_left = 117.0
 offset_top = 30.3333
 offset_right = 137.0

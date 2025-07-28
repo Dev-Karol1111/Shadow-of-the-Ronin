@@ -12,3 +12,7 @@
 #### Version 1.1
 1. Equiping weapons in inventory
 2. Changing weapons
+
+#### Version 1.2
+1. Mini map
+2. Dead screen
